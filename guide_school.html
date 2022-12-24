@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+
+    <nav class="navbar">
+        
+        <div class="navbar__logo">
+            <i class="fa-solid fa-school"></i> <a class="white" href="index.html">인천산업정보학교</a>
+        </div>
+    
+        <ul class="navbar__menu">
+            <li>
+                <div class="dropdown">
+                <button class="dropbtn">입학안내
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="guide.html">
+                    <i class="fa-regular fa-file-lines"></i> 모집요강
+                </a>
+                <a href="guide_school.html">
+                    <i class="fa-solid fa-magnifying-glass"></i> 지원학교 검색
+                </a>
+              </div>
+            </div>
+           </li>
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn">학과소개
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="">
+                <i class='fas fa-utensils'></i> 호텔조리과
+              </a>
+              <a href="">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> 뷰티아트과
+              </a>
+              <a href="">
+                <i class="fa-solid fa-camera"></i> 사진영상예술과
+              </a>
+              <a href="">
+                <i class="fa-solid fa-paintbrush"></i> 시각디자인과
+              </a>
+              <a href="">
+                <i class="fa-solid fa-dog"></i> 펫케어과</a>
+              <a href="">
+                <i class="fa-solid fa-computer"></i> 소프트웨어과</a>
+            </div>
+          </div>
+         </li>
+          <li><a class="white" href="exercise.html">학교소개</a></li>
+          <li><a class="white" href="booking.html">오시는길</a></li>
+       </ul>
+    
+        <ul class="navbar__icons">
+          <li><i class="fa-brands fa-youtube"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+        </ul>
+      </nav>
+
+      <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        
+        function sortTable(n) {
+          var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+          table = document.getElementById("myTable");
+          switching = true;
+          dir = "asc"; 
+          while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 0; i < (rows.length - 1); i++) {
+              shouldSwitch = false;
+              x = rows[i].getElementsByTagName("TD")[n];
+              y = rows[i + 1].getElementsByTagName("TD")[n];
+              if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                  shouldSwitch= true;
+                  break;
+                }
+              } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                  shouldSwitch = true;
+                  break;
+                }
+              }
+            }
+            if (shouldSwitch) {
+              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+              switching = true;
+              switchcount ++;      
+            } else {
+              if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+              }
+            }
+          }
+        }
+        </script>
+
+<h1>#지원학교 검색</h1>
+<input id="myInput" type="text" placeholder="학교명을 입력해 주세요">
+<br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">학교명 <i class="fa fa-sort"></i></th> 
+            <th onclick="sortTable(1)">구분 <i class="fa fa-sort"></i></th> 
+        </tr>
+  </thead>
+  <tbody id = "myTable">
+    <tr>
+        <td>가림고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>가정고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>가좌고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>강화여자고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>검단고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>계산고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>계산여자고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>계양고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>광성고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>광성고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>교동고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>대인고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>대청고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>덕신고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>덕적고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>도림고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>동산고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>명신여자고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>문일여자고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>박문여자고등학교</td>
+        <td>일반고</td>
+    </tr>
+    <tr>
+        <td>백령고등학교</td>
+        <td>일반고</td>
+    </tr>
+ </tbody>
+</table>
+
+백석고등학교, 부개고등학교, 부개여자고등학교, 부광고등학교,부광여자고등학교, 부평고등학교, 부평여자고등학교, 삼산고등학교, 서도고등학교,
+                                서운고등학교, 서인천고등학교, 석정여자고등학교, 선인고등학교, 세일고등학교,
+                                송도고등학교, 숭덕여자고등학교, 신명여자고등학교, 신송고등학교, 안남고등학교,
+                                연수고등학교, 연수여자고등학교, 연평고등학교, 옥련여자고등학교, 인명여자고등학교,
+                                인성여자고등학교, 인일여자고등학교, 인제고등학교, 인천고등학교, 인천고잔고등학교,
+                                인천남고등학교, 인천남동고등학교, 인천논현고등학교, 인천대건고등학교, 
+                                인천마전고등학교, 인천만수고등학교, 인천부흥고등학교, 인천산곡고등학교, 
+                                인천세원고등학교, 인천송천고등학교, 인천여자고등학교, 인천연송고등학교, 
+                                인천영선고등학교, 인천영종고등학교, 인천영흥고등학교, 인천예일고등학교, 
+                                인천원당고등학교, 인천중산고등학교, 인천청라고등학교, 인천청라고등학교,
+                                인천초은고등학교, 인천해송고등학교, 인천해원고등학교, 인천효성고등학교,
+                                인하대학교사범대학부속고등학교, 인항고등학교, 인화여자고등학교, 작전고등학교,
+                                작전여자고등학교, 제물포고등학교, 제일고등학교, 학익고등학교, 학익여자고등학교
+                                <br></br>
+                                (학교수: 81)
+                           </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#tag26">자율고</a></td>
+                            <td><a name="tag18"></a>
+                                강화고등학교, 동인천고등학교, 인천공항고등학교, 인천상정고등학교, 인천신현고등학교,
+                                인천포스코고등학교, 인천하늘고등학교
+                                <br></br>
+                                (학교수: 7)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#tag26">대안교육특성화고</a></td>
+                            <td><a name="tag20"></a>
+                                산마을고등학교
+                                <br></br>
+                                (학교수: 1)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#tag26">대안학교</a></td>
+                            <td><a name="tag22"></a>
+                                인천청담고, 인천한누리학교
+                                <br></br>
+                                (학교수: 2)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#tag26">대안위탁학교</a></td>
+                            <td><a name="tag24"></a>
+                                인천해밀학교
+                                <br></br>
+                                (학교수: 1)
+                            </td>
+    
+ </body>
+  </html>

@@ -1,84 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  font-size:4vw;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 1px;
-}
-
-th {
-  background-color: #041a4f;
-  cursor: pointer;
-  color: white;
-  position: sticky;
-  top: 0; 
-  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
-}
-
-th:hover {
-    background-color:#04AA6D;
-    color: white;    
-
-  }
-
-td{
-    border: 2px solid #000000;
-  }
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-  
-tr:hover {
-    background-color:#04AA6D;
-    color: white;      
-}
-
-.special-image {
-    border-radius: 15px;
-}
-
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-
-</style>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>인천 유일의 시교육청 산하 직업위탁기관 [인천산업정보학교]</h1>
-  <a href="guide.html">visit gude page</a>
+
+  <nav class="navbar">
+    
+    <div class="navbar__logo">
+      <i class="fa-solid fa-school"></i> <a class="white" href="index.html">인천산업정보학교</a>
+    </div>
+
+    <ul class="navbar__menu">
+      <li>
+        <div class="dropdown">
+        <button class="dropbtn">입학안내
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="guide.html">
+            <i class="fa-regular fa-file-lines"></i> 모집요강
+        </a>
+        <a href="guide_school.html">
+            <i class="fa-solid fa-magnifying-glass"></i> 지원학교 검색
+        </a>
+      </div>
+    </div>
+   </li>
+      <li>
+        <div class="dropdown">
+          <button class="dropbtn">학과소개
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="">호텔조리과</a>
+          <a href="">뷰티아트과</a>
+          <a href="">사진영상예술과</a>
+          <a href="">시각디자인과</a>
+          <a href="">펫케어과</a>
+          <a href="">소프트과</a>
+        </div>
+      </div>
+      </li>
+      <li><a class="white" href="exercise.html">학교소개</a></li>
+      <li><a class="white" href="booking.html">오시는길</a></li>
+   </ul>
+
+    <ul class="navbar__icons">
+      <li><i class="fa fa-youtube"></i></li>
+      <li><i class="fa fa-instagram"></i></li>
+    </ul>
+  </nav>
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/yW-Y1U_swdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
@@ -87,5 +62,6 @@ tr:hover {
 
   <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ipschool22/video/7173541495121743106" data-video-id="7173541495121743106" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@ipschool22" href="https://www.tiktok.com/@ipschool22?refer=embed">@ipschool22</a> <a title="인천산업정보학교" target="_blank" href="https://www.tiktok.com/tag/%EC%9D%B8%EC%B2%9C%EC%82%B0%EC%97%85%EC%A0%95%EB%B3%B4%ED%95%99%EA%B5%90?refer=embed">#인천산업정보학교</a> <a target="_blank" title="♬ 오리지널 사운드  - 인천산업정보학교" href="https://www.tiktok.com/music/오리지널-사운드-인천산업정보학교-7173541572163062529?refer=embed">♬ 오리지널 사운드  - 인천산업정보학교</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 
+  <a id="here" href="guide.html">here</a>
  </body>
   </html>
