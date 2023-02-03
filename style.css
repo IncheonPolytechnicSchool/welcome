@@ -44,22 +44,6 @@ table {
       border-radius: 15px;
   }
   
-  .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: #555;
-  }
-  
   .content {
     padding: 0 18px;
     max-height: 0;
@@ -111,6 +95,7 @@ body {
     list-style: none;
     color: white;
     display: flex;
+    padding-left: 0;
 }
 
 .navbar__icons li {
@@ -125,6 +110,7 @@ a.white {
 .dropdown {
     float: left;
     overflow: hidden;
+    text-align: center;
 }
 
 .dropdown .dropbtn {
@@ -161,4 +147,38 @@ a.white {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar { 
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar__menu{
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+    }
+
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__icons{
+        justify-content: center;
+        width: 100%;
+    }
+  
+    .dropbtn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .dropdown{
+        justify-content: center;
+        width: 100%;
+    }
 }
