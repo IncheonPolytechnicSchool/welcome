@@ -34,20 +34,17 @@ h2 a {
   text-decoration: none;
 }
 
-  
-.link a {
-    color: red;
-  }
-
-.link a :hover {
-    background-color: #FFF842;
-    color: blue;
-    font-weight: bold;
-
-  }
-
 .blue { color: #185875; }
 .yellow { color: #FFF842; }
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 94%;
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
 
 .container th h1 {
 	  font-weight: bold;
@@ -64,27 +61,16 @@ h2 a {
 	        box-shadow: 0 2px 2px -2px #0E1119;
 }
 
-.container {
-	  text-align: left;
-	  overflow: hidden;
-	  width: 80%;
-	  margin: 0 auto;
-  display: table;
-  padding: 0 0 8em 0;
-}
-
 .container td, .container th {
 	  padding-bottom: 2%;
 	  padding-top: 2%;
   padding-left:2%;  
 }
 
-/* Background-color of the odd rows */
 .container tr:nth-child(odd) {
 	  background-color: #323C50;
 }
 
-/* Background-color of the even rows */
 .container tr:nth-child(even) {
 	  background-color: #2C3446;
 }
@@ -96,10 +82,10 @@ h2 a {
 .container td:first-child { color: #FB667A; }
 
 .container tr:hover {
-   background-color: #464A52;
--webkit-box-shadow: 0 6px 6px -6px #0E1119;
-	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
-	        box-shadow: 0 6px 6px -6px #0E1119;
+    background-color: #464A52;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
 }
 
 .container td:hover {
@@ -120,8 +106,6 @@ h2 a {
 .container td:nth-child(4),
 .container th:nth-child(4) { display: none; }
 }
-
-
 
 .navbar {
     overflow: hidden;
@@ -249,26 +233,30 @@ a.white {
     }
 }
 
-a:link {
-    color: rgb(3, 194, 115);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:hover {
+a.linked:link  {
     color: blue;
-    background-color: #FFF842;
+    font-weight: bold;
+    background-color:#FFF842;;
     text-decoration: underline;
   }
-  
-  a:active {
-    color: yellow;
+
+a.linked:visited  {
+    color: blue;
+    background-color: #FFF842;;
+    text-decoration: underline;
+  }
+
+a.linkedTitle:link  {
+    color: rgb(151, 245, 255);
+    font-weight: bold;
     background-color: transparent;
     text-decoration: underline;
   }
+
+a.linkedTitle:visited  {
+    color: rgb(151, 245, 255);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  
