@@ -1,41 +1,45 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  line-height: 1.42em;
-  color:#A7A1AE;
-  background-color:#1F2739;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: #A7A1AE;
+    background-color: #1F2739;
 }
 
 h1 {
-  font-size:3em; 
-  font-weight: 300;
-  line-height:1em;
-  text-align: center;
-  color: #4DC3FA;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+    color: #4DC3FA;
 }
 
 h2 {
-  font-size:1em; 
-  font-weight: 300;
-  text-align: center;
-  display: block;
-  line-height:1em;
-  padding-bottom: 2em;
-  color: #FB667A;
+    font-size: 1em;
+    text-align: center;
+    display: block;
+    line-height: 1.5em;
+    padding-bottom: 2em;
+    color: #FB667A;
 }
 
 h2 a {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #FB667A;
-  text-decoration: none;
+    text-transform: uppercase;
+    color: #FB667A;
+    text-decoration: none;
 }
 
-.blue { color: #185875; }
-.yellow { color: #FFF842; }
+.blue {
+    color: #185875;
+}
+
+.yellow {
+    color: #FFF842;
+}
 
 .container {
     text-align: left;
@@ -47,39 +51,43 @@ h2 a {
 }
 
 .container th h1 {
-	  font-weight: bold;
-	  font-size: 1em;
-  text-align: left;
-  color: #185875;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    color: #185875;
 }
 
 .container td {
-	  font-weight: normal;
-	  font-size: 1em;
-  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
-	        box-shadow: 0 2px 2px -2px #0E1119;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
-.container td, .container th {
-	  padding-bottom: 2%;
-	  padding-top: 2%;
-  padding-left:2%;  
+.container td,
+.container th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
 }
 
 .container tr:nth-child(odd) {
-	  background-color: #323C50;
+    background-color: #323C50;
 }
 
 .container tr:nth-child(even) {
-	  background-color: #2C3446;
+    background-color: #2C3446;
 }
 
 .container th {
-	  background-color: #1F2739;
+    background-color: #1F2739;
 }
 
-.container td:first-child { color: #FB667A; }
+.container td:first-child {
+    color: whitesmoke;
+}
 
 .container tr:hover {
     background-color: #464A52;
@@ -89,22 +97,25 @@ h2 a {
 }
 
 .container td:hover {
-  background-color: #FFF842;
-  color: #403E10;
-  font-weight: bold;
-  
-  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
-  transform: translate3d(6px, -6px, 0);
-  
-  transition-delay: 0s;
-	  transition-duration: 0.4s;
-	  transition-property: all;
-  transition-timing-function: line;
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
 }
 
 @media (max-width: 800px) {
-.container td:nth-child(4),
-.container th:nth-child(4) { display: none; }
+
+    .container td:nth-child(4),
+    .container th:nth-child(4) {
+        display: none;
+    }
 }
 
 .navbar {
@@ -117,7 +128,7 @@ h2 a {
 }
 
 .navbar__logo {
-    font-size: 24px;
+    font-size: 1em;
     color: white;
 }
 
@@ -132,13 +143,14 @@ h2 a {
 }
 
 .navbar__menu li {
-    padding:8px 12px;
+    padding: 8px 12px;
 }
 
-.navbar__menu li:hover, .dropdown:hover .dropbtn {
+.navbar__menu li:hover,
+.dropdown:hover .dropbtn {
     background-color: #d49466;
     border-radius: 4px;
-    
+
 }
 
 .navbar__icons {
@@ -153,8 +165,8 @@ h2 a {
 }
 
 a.white {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 .dropdown {
@@ -164,7 +176,7 @@ a.white {
 }
 
 .dropdown .dropbtn {
-    font-size: 16px;
+    font-size: 1em;
     border: none;
     outline: none;
     color: white;
@@ -178,7 +190,7 @@ a.white {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -200,16 +212,16 @@ a.white {
 }
 
 @media screen and (max-width: 768px) {
-    .navbar { 
+    .navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 8px 24px;
     }
 
-    .navbar__menu{
+    .navbar__menu {
         flex-direction: column;
         align-items: center;
-        width:100%;
+        width: 100%;
     }
 
     .navbar__menu li {
@@ -217,46 +229,56 @@ a.white {
         text-align: center;
     }
 
-    .navbar__icons{
+    .navbar__icons {
         justify-content: center;
         width: 100%;
     }
-  
+
     .dropbtn {
         justify-content: center;
         width: 100%;
     }
 
-    .dropdown{
+    .dropdown {
         justify-content: center;
         width: 100%;
     }
 }
 
-a.linked:link  {
+a.linked:link {
     color: blue;
+    font-size: 1em;
     font-weight: bold;
-    background-color:#FFF842;;
+    background-color: #FFF842;
+    border-radius: 8px;
+    padding:3px;
     text-decoration: underline;
-  }
+}
 
-a.linked:visited  {
+a.linked:visited {
     color: blue;
-    background-color: #FFF842;;
+    font-size: 1em;
+    background-color: #FFF842;
     text-decoration: underline;
-  }
+}
 
-a.linkedTitle:link  {
+a.linkedTitle:link {
     color: rgb(151, 245, 255);
+    font-size: 1em;
     font-weight: bold;
     background-color: transparent;
     text-decoration: underline;
-  }
+}
 
-a.linkedTitle:visited  {
+a.linkedTitle:visited {
     color: rgb(151, 245, 255);
+    font-size: 1em;
     background-color: transparent;
     text-decoration: underline;
-  }
+}
 
-  
+.SUM {
+    text-align: center;
+    font-size: 1em;
+    color: rgb(151, 245, 255);
+}
