@@ -6,26 +6,13 @@ body {
     font-size: 3vw;
     font-weight: bold;
     line-height: 3.5vw;
-    color: #A7A1AE;
+    color: whitesmoke;
     background-color: #1F2739;
 }
 
 h1 {
     text-align: center;
     color: #4DC3FA;
-}
-
-h2 {
-    text-align: center;
-    display: block;
-    padding-bottom: 2em;
-    color: #FB667A;
-}
-
-h2 a {
-    text-transform: uppercase;
-    color: #FB667A;
-    text-decoration: none;
 }
 
 .blue {
@@ -55,7 +42,7 @@ h2 a {
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
     -moz-box-shadow: 0 2px 2px -2px #0E1119;
     box-shadow: 0 2px 2px -2px #0E1119;
-    border: 1px solid black;
+    border: 1px solid rgb(3, 226, 255);
     border-radius: 10px;
 }
 
