@@ -3,26 +3,21 @@
 
 body {
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 1em;
+    font-size: 3vw;
     font-weight: bold;
-    line-height: 1.5em;
+    line-height: 3.5vw;
     color: #A7A1AE;
     background-color: #1F2739;
 }
 
 h1 {
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 1.5em;
     text-align: center;
     color: #4DC3FA;
 }
 
 h2 {
-    font-size: 1em;
     text-align: center;
     display: block;
-    line-height: 1.5em;
     padding-bottom: 2em;
     color: #FB667A;
 }
@@ -52,13 +47,11 @@ h2 a {
 
 .container th h1 {
     font-weight: bold;
-    font-size: 1em;
     text-align: left;
     color: #185875;
 }
 
 .container td {
-    font-size: 1em;
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
     -moz-box-shadow: 0 2px 2px -2px #0E1119;
     box-shadow: 0 2px 2px -2px #0E1119;
@@ -99,7 +92,6 @@ h2 a {
 .container td:hover {
     background-color: #FFF842;
     color: #403E10;
-    font-weight: bold;
 
     box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
     transform: translate3d(6px, -6px, 0);
@@ -247,8 +239,6 @@ a.white {
 
 a.linked:link {
     color: blue;
-    font-size: 1em;
-    font-weight: bold;
     background-color: #FFF842;
     border-radius: 8px;
     padding:3px;
@@ -257,28 +247,23 @@ a.linked:link {
 
 a.linked:visited {
     color: blue;
-    font-size: 1em;
     background-color: #FFF842;
     text-decoration: underline;
 }
 
 a.linkedTitle:link {
     color: rgb(151, 245, 255);
-    font-size: 1em;
-    font-weight: bold;
     background-color: transparent;
     text-decoration: underline;
 }
 
 a.linkedTitle:visited {
     color: rgb(151, 245, 255);
-    font-size: 1em;
     background-color: transparent;
     text-decoration: underline;
 }
 
 .SUM {
     text-align: center;
-    font-size: 1em;
     color: rgb(151, 245, 255);
 }
