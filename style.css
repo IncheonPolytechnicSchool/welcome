@@ -27,6 +27,7 @@ h1 {
     text-align: left;
     overflow: hidden;
     width: 94%;
+    max-width: 1000px;
     margin: 0 auto;
     display: table;
     padding: 0 0 8em 0;
@@ -228,8 +229,9 @@ a.linked:link {
     color: blue;
     background-color: #FFF842;
     border-radius: 8px;
-    padding:3px;
+    padding:5px;
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 a.linked:visited {
@@ -242,6 +244,7 @@ a.linkedTitle:link {
     color: rgb(151, 245, 255);
     background-color: transparent;
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 a.linkedTitle:visited {
@@ -249,7 +252,6 @@ a.linkedTitle:visited {
     background-color: transparent;
     text-decoration: underline;
 }
-
 
 .SUM {
     text-align: center;
