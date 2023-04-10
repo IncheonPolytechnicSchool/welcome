@@ -41,8 +41,8 @@ h1 {
 .container td {
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
     -moz-box-shadow: 0 2px 2px -2px #0E1119;
-    box-shadow: 0 2px 2px -2px #0E1119;
-    border: 1px solid rgb(3, 226, 255);
+    box-shadow: 0 2px 2px -2px #006974;
+    border: 1px solid rgb(0, 238, 255);
     border-radius: 10px;
 }
 
@@ -249,6 +249,7 @@ a.linkedTitle:visited {
     background-color: transparent;
     text-decoration: underline;
 }
+
 
 .SUM {
     text-align: center;
