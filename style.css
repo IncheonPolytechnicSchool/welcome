@@ -130,7 +130,6 @@ h1 {
 .dropdown:hover .dropbtn {
     background-color: #d49466;
     border-radius: 4px;
-
 }
 
 .navbar__icons {
@@ -147,6 +146,12 @@ h1 {
 a.white {
     text-decoration: none;
     color: white;
+}
+
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown {
