@@ -30,7 +30,7 @@ h1 {
     max-width: 1000px;
     margin: 0 auto;
     display: table;
-    padding: 0 0 8em 0;
+    padding: 0 0 1em 0;
 }
 
 .container th h1 {
@@ -39,12 +39,23 @@ h1 {
     color: #185875;
 }
 
+.container table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.container td:first-child {
+    width: 15%; 
+}
+
 .container td {
+    word-break: break-word;
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
     -moz-box-shadow: 0 2px 2px -2px #0E1119;
     box-shadow: 0 2px 2px -2px #006974;
     border: 1px solid rgb(0, 238, 255);
     border-radius: 10px;
+    min-width: 15%;
 }
 
 .container td,
