@@ -9,63 +9,6 @@
 
 <body>
 
-    <nav class="navbar">
-
-        <div class="navbar__logo">
-            <i class="fa-solid fa-school"></i> <a class="white" href="index.html">인천산업정보학교</a>
-        </div>
-
-        <ul class="navbar__menu">
-            <li>
-                <div class="dropdown">
-                    <button class="dropbtn">입학안내
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="guide.html">
-                            <i class="fa-regular fa-file-lines"></i> 모집요강
-                        </a>
-                        <a href="guide_school.html">
-                            <i class="fa-solid fa-magnifying-glass"></i> 지원학교 검색
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown">
-                    <button class="dropbtn">학과소개
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="">
-                            <i class='fas fa-utensils'></i> 호텔조리과
-                        </a>
-                        <a href="">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i> 뷰티아트과
-                        </a>
-                        <a href="">
-                            <i class="fa-solid fa-camera"></i> 사진영상예술과
-                        </a>
-                        <a href="">
-                            <i class="fa-solid fa-paintbrush"></i> 시각디자인과
-                        </a>
-                        <a href="">
-                            <i class="fa-solid fa-dog"></i> 펫케어과</a>
-                        <a href="">
-                            <i class="fa-solid fa-computer"></i> 소프트웨어과</a>
-                    </div>
-                </div>
-            </li>
-            <li><a class="white" href="exercise.html">학교소개</a></li>
-            <li><a class="white" href="booking.html">오시는길</a></li>
-        </ul>
-
-        <ul class="navbar__icons">
-            <li><i class="fa-brands fa-youtube"></i></li>
-            <li><i class="fa-brands fa-instagram"></i></li>
-        </ul>
-    </nav>
-
     <h1><i class="fa-solid fa-magnifying-glass"></i> 지원학교 검색</h1>
     <input style="width: 100%; font-size: 3.5vw" id="myInput" type="text" placeholder="검색어를 입력해 주세요">
 
@@ -75,7 +18,7 @@
     <table class="container">
         <thead>
             <tr>
-                <th style='cursor:pointer' onclick="sortTable(0)">학교명 <i class="fa fa-sort"></i></th>
+                <th style='cursor:pointe; width: 65%;' onclick="sortTable(0)">학교명 <i class="fa fa-sort"></i></th>
                 <th style='cursor:pointer' onclick="sortTable(1)">구분 <i class="fa fa-sort"></i></th>
             </tr>
         </thead>
@@ -447,6 +390,10 @@
             <tr>
                 <td>인천한누리학교</td>
                 <td>대안학교</td>
+            </tr>
+            <tr>
+                <td>인천해밀학교</td>
+                <td>대안위탁학교</td>
             </tr>
         </tbody>
     </table>
