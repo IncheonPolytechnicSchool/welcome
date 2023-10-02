@@ -1,162 +1,189 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
-p {
-  font-family: 'Hi Melody', cursive;
-  font-size: 30px;
-  text-align: center;
-  border-style: outset;
-  border-color: coral;
-  border-radius: 15px;
-  }
-
-mark {
-   background-color: #083987;
-   color: #ffffff
- }
-
- #wrapper {
-   width: 100%;
-   max-width: 812px; /*actual width of image-- behaves strangely if exceeding this*/
-   position: relative;
- }
-
- #wrapper img {
-   max-width: 100%;
- }
-
- #anchor-food {
-   border: 0px solid blue;
-   height: 20%;
-   width: 65%;
-   position: absolute;
-   left: 20%;
-   top: 80%;
- }
-
- #anchor-SSD {
-   border: 0px solid blue;
-   height: 32%;
-   width: 52.5%;
-   position: absolute;
-   left: 30%;
-   top: 5%;
- }
-
- #anchor-BGD {
-   border: 0px solid blue;
-   height: 73%;
-   width: 19%;
-   position: absolute;
-   left: 0%;
-   top: 16%;
- }
-
- #anchor-Ground {
-   border: 0px solid blue;
-   height: 41%;
-   width: 79%;
-   position: absolute;
-   left: 20%;
-   top: 38%;
- }
- #customers {
-   font-family: Arial, Helvetica, sans-serif;
-   border-collapse: collapse;
-   width: 100%;
- }
-
- #customers td, #customers th {
-   border: 1px solid #ddd;
-   padding: 8px;
- }
-
- #customers tr:nth-child(even){background-color: #f2f2f2;}
-
- #customers tr:hover {background-color: #ddd;
- }
-
- #customers th {
-   padding-top: 12px;
-   padding-bottom: 12px;
-   text-align: center;
-   background-color: #04AA6D;
-   color: white;
- }
-
- #customers tr {
-   text-align: center;
- }
-
- #dynamic-image {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-</style>
-<script>
-
-function writeText(txt, imgSrc) {
-  document.getElementById("desc").innerHTML = txt;
-  document.getElementById("dynamic-image").src = imgSrc;
-}
-</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
+	
+    <h1>모집 일정</h1>
+        <ul class="styled-list">
+        <li>
+            모집 일정은 '일반 전형'과 '추가 전형'으로 이루어져 있습니다. '추가 전형'은 '일반 전형'에서 모집정원을 채우지 못했을 경우 부족 인원만큼 충원합니다.
+        </li>
+        <li>
+            일반 전형
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>일정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>원서접수</td>
+                        <td>
+                            2023-10-7 화요일.
+                            ~
+                            2023-11-21 화요일 16:40분.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>면접</td>
+                        <td>
+                            2023-11-27 월요일.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>합격자 발표</td>
+                        <td>
+                            2023-11-28 화요일. 14:00 이후 공지.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>    
+        </li>
+        <li>
+            추가 전형
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>일정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>원서접수</td>
+                        <td>
+                            2023-12-5 화요일. 
+                            ~
+                            2023-12-26 화요일 16:40.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>면접</td>
+                        <td>
+                            2023년 12월 28일 목요일.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>합격자 발표</td>
+                        <td>
+                            2023년 12월 29일 금요일. 14:00 이후 공지.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>    
+        </li>
+        <li>
+            일반 전형, 추가 전형 
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>세부 내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            원서 접수 
+                        </td>
+                        <td>
+                            <ul>
+                                제출 서류 
+                                <li>입교 지원서: 1부, 생활기록부 사본: 1부(2학년 1학기 마감)</li>
+                            </ul>
+                            <ul>
+                                원서 접수 방법(학생이 개별접수, 아래 방법 중 하나를 선택)
+                                <li>
+                                    이메일(e-mail): cleosue@ice.go.kr
+                                </li>
+                                <li>
+                                    팩스(Fax): 032-765-5474
+                                </li>
+                                <li>
+                                    우편: 인천 동구 금창로31, 신입생업무담당자앞
+                                </li>
+                                <li>
+                                   위탁담당 선생님께 말씀드리기
+                                </li>
+                              </ul>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td>
+                            면접
+                        </td>
+                        <td>
+                            인천산업정보학교의 3층 강당에서 출석 확인 후, 학과별 면접실로 이동(면접확인증 발급)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            합격자 발표
+                        </td>
+                        <td>
+                          <ul>
+                            공지
+                            <li>
+                                인천산업정보학교 홈페이지: http://sanup.icesc.kr/
+                            </li>
+                            <li>
+                                개별 문자 메시지 발송
+                            </li>
+                            <li>
+                                해당 원적교애 공문 발송
+                            </li>
+                          </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+    
+    <br>
 
-
-<div id="wrapper">
-  <img src="https://s2.im.ge/2021/06/28/r8lU6.jpg" />
-  <a id="anchor-food" onmouseover="writeText('우리학교의 [급식실]입니다.<br>(<mark>영양선생님</mark>께서 급식실에 상주하시며, 양질의 <mark>무상 급식</mark>을 제공합니다.)','../photos/school_5.jpg')"></a>
-  <a id="anchor-SSD" onmouseover="writeText('우리학교의 [실습동]입니다<br>1층: 호텔<mark>조리</mark>과, 스마트<mark>자동차</mark>과 등등<br>2층: 뷰티<mark>미용</mark>과, 관광<mark>중국어</mark>과, 제2교무실(<mark>취업</mark>부,<mark>진로상담</mark>부 등) 등<br>3층: <mark>사진영상</mark>예술과, <mark>시각디자인</mark>과, 도서관, 체력단련실 등')"></a>
-  <a id="anchor-BGD" onmouseover="writeText('우리학교의 [본관동]입니다.<br>1층: Wee클래스, 양호실, 교실 등등<br>2층: 본교무실, 행정실 등등<br>3층: <mark>소프트웨어</mark>과, 회의실 등등')" ></a>
-  <a id="anchor-Ground" onmouseover="writeText('우리학교의 [운동장]입니다.<br><mark>농구 코트: </mark> 농구 골대: 4개<br>다목적 운동 코트: <mark>족구</mark>, <mark>배드민턴</mark> 등 가능','../photos/school_4.jpg')"></a>
-</div>
-
-<p id="desc">각 건물에 <mark>마우스 커서(터치)</mark>를 올리시면, 해당 건물의 설명이 출력됩니다.<br>각 건물을 <mark>클릭</mark>하시면, 해당 건물의 배치도로 이동됩니다.</p>
-
-<img id="dynamic-image" src="https://via.placeholder.com/300x200" alt="Building image" style="display: block; margin: 0 auto; width: 100%;">
-
-<table id="customers">
-	<tr>
-		<th>건물명</th>
-		<th>층</th>
-		<th><인천산업정보학교> 시설</th>
-	</tr>
-	<tr>
-		<td rowspan=3>실습동</td>
-		<td>3</td>
-		<td>사진영상예술과, 시각디자인과, 다목적강당, 도서관, 체력단련실 등</td>
-	</tr>
-	<tr>
-		<td>2</td>
-		<td>뷰티미용과, 관광중국어과, 제2교무실(취업부, 진로상담부) 등</td>
-	</tr>
-  <tr>
-    <td>1</td>
-    <td>호텔조리과, 스마트자동차과 등</td>
-  </tr>
-  <tr>
-    <td rowspan=3>본관동</td>
-    <td>3</td>
-    <td>소프트웨어과, 회의실, 교육정보부실 등</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>본교무실, 장학협의실, 행정실, 교장실 등</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Wee클래스, 양호실, 시설관리실 등</td>
-  </tr>
-</table>
-
+    <h1>[입교지원서] 다운로드 링크</h1>
+    <ul>
+        <li>
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>입교 지원서 다운로드 양식</th>
+                        <th>입교 지원서 다운로드 링크</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            입교 지원서 워드 파일(doc)
+                        </td>
+                        <td>
+                            <a href="https://drive.google.com/uc?export=download&id=1o910ErmPLSmiEmeCpWSVAxF-E9w00Bt9">
+                                https://drive.google.com/uc?export=download&id=1o910ErmPLSmiEmeCpWSVAxF-E9w00Bt9</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           입교 지원서 한글 파일(hwp)
+                        </td>
+                        <td>
+                            <a href="https://drive.google.com/uc?export=download&id=18EmuG4XFUiM9rYzhkPrtTQfNDS-So6r0">
+                                https://drive.google.com/uc?export=download&id=18EmuG4XFUiM9rYzhkPrtTQfNDS-So6r0</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+                        
 </body>
-</html>
 
-<body>
+</html>
