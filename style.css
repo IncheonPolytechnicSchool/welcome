@@ -13,6 +13,7 @@ body {
 h1 {
     text-align: center;
     color: #4DC3FA;
+    line-height: 1.5;
 }
 
 .blue {
@@ -272,4 +273,20 @@ a.linkedTitle:visited {
 .SUM {
     text-align: center;
     color: rgb(151, 245, 255);
+}
+
+.styled-list {
+    background-color: #141a28; 
+    border-radius: 20px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    list-style-type: disc; 
+    width: 85%;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.7), 
+                inset -5px -5px 10px rgba(56, 78, 134, 0.5);
+}
+
+.styled-list li {
+    padding: 1%; 
+    list-style-position: inside; 
 }
