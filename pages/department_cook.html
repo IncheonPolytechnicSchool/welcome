@@ -9,41 +9,75 @@
 
 <body>
     
-    <h1><i class="fa-solid fa-magnifying-glass"></i> 지원학교 검색</h1>
-
-    <div style="color:aquamarine" id='searchResultsCount'></div>
-    <div id='result'></div>
-
-
-    <table class="container">
-        <thead>
-            <tr>
-                <th>
-                    학교명 <i class="fa fa-sort"></i><br>
-                    <input style="width: 100%;" class="searchInput" data-column="0" type="text" placeholder="학교명을 입력해 주세요">
-                </th>
-                <th>
-                    구분 <i class="fa fa-sort"></i><br>
-                    <input style="width: 100%;" class="searchInput" data-column="1" type="text" placeholder="구분을 입력해 주세요">
-                </th>
-            </tr>
-        </thead>
-        <tbody id="myTable">
-            <tr>
-                <td>가림고등학교</td>
-                <td>일반고</td>
-            </tr>
-            <tr>
-                <td>가정고등학교</td>
-                <td>일반고</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <script>
-const schoolInfo = await neis.getSchoolInfo({ SCHUL_NM: "한세사이버보안고등학교" });
-console.log(schoolInfo);   
-    </script>
+    <h1>[학과]호텔조리과</h1>
+    <ul class="styled-list">
+        <li>호텔조리과는 '마스터쉐프 과정'과 '카페베이커리 과정'의 2가지 과정으로 이루어져 있습니다.</li>
+        <li>호텔조리과의 교육목표: "요리와 커피, 제과제빵에 대한 지식과 실무능력을 갖춘 음식서비스 분야의 전문가 양성"</li>
+        <li>호텔조리과의 교육과정:
+            <Table class="container">
+                <thead>
+                    <tr>
+                        <th>과정</th>
+                        <th>구분</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>전공교과</td>
+                        <td>마스터쉐프 과정</td>
+                        <td>서양조리, 한국조리, 제과, 바리스타</td>
+                    </tr>
+                    <tr>
+                        <td>자격증</td>
+                        <td>마스터쉐프 과정</td>
+                        <td>한식조리기능사, 양식조리기능사, 바리스타1급~2급, 제과 등</td>
+                    </tr>
+                    <tr>
+                        <td>전공교과</td>
+                        <td>카페베이커리 과정</td>
+                        <td>서양조리, 제과, 제빵, 바리스타</td>
+                    </tr>
+                    <tr>
+                        <td>자격증</td>
+                        <td>카페베이커리 과정</td>
+                        <td>양식조리기능사, 제과기능사, 제빵기능사, 바리스타1급~2급 등</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            호텔조리과의 졸업 후 진로:
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>취업</td>
+                        <td>호텔조리사, 단체급식조리사, 전문레스토랑 조리사, 외식업체 조리사, 베이커리 경영, 디저트 전문가, 파티쉐, 요리학원 강사, 바리스타 등</td>
+                    </tr>
+                    <tr>
+                        <td>대학 진학</td>
+                        <td>외식조리학과, 제과제빵과, 바리스타과, 식품과학과 등 관련학과</td>
+                    </tr>
+                    <tr>
+                        <td>학업 병행</td>
+                        <td>전문대학과 외식산업체 MOU(양해각서)체결 및 운영</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            호텔조리과의 정원: 3학급, 57명.(마스터쉐프과정: 1학급, 19명. 카페베이커리과정: 2학급, 38명)
+        </li>
+        <li>
+            호텔조리과의 위키피디아 링크: https://ko.wikipedia.org/wiki/인천산업정보학교#[학과]호텔조리과
+        </li>
+    </ul>
 
 </body>
 
