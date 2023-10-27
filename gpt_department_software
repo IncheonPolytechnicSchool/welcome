@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <h1>[학과]소프트웨어과</h1>
+    <ul class="styled-list">
+        <li>소프트웨어과의 교육목표: "4차 산업혁명 시대를 선도하는 창의적인 소프트웨어 개발 전문 인재 양성"</li>
+        <li>소프트웨어과의 교육과정:
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>전공교과</td>
+                        <td>응용프로그래밍개발, 스마트문화앱콘텐츠제작</td>
+                    </tr>
+                    <tr>
+                        <td>자격증</td>
+                        <td>정보처리기능사, 정보기기운용기능사, 컴퓨터활용능력, 그래픽기술자격, 워드프로세서, SW코딩자격</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>소프트웨어과의 졸업 후 진로:
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>내용</th>
+                    </tr>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>취업</td>
+                        <td>응용프로그래밍 개발자, 전산 사무직, 게임 개발 회사, 웹&앱 개발 분야, VR콘텐츠 개발 회사 등</td>
+                    </tr>
+                    <tr>
+                        <td>대학 진학</td>
+                        <td>소프트웨어과, 컴퓨터공학과, 정보통신과, 디지털콘텐츠과 등 IT 관련 학과</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            소프트웨어과의 정원: 1학급, 19명
+        </li>
+        <li>
+            소프트웨어과의 위키피디아 링크: https://ko.wikipedia.org/wiki/인천산업정보학교#[학과]소프트웨어과
+        </li>
+    </ul>
+
+</body>
+
+</html>
