@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <h1>[학교 정원]학과 구성</h1>
+    <ul class="styled-list">
+        <li>
+            (모집) 정원과 학급수
+            <table class="container">
+                <thead>
+                    <tr>
+                        <td style="width: 65%;">호텔조리과(마스터쉐프과정)</td>
+                        <td style="text-align: center;">1</td>
+                        <td style="text-align: center;">19</td>
+                    </tr>
+                    <tr>
+                        <td>호텔조리과(카페베이커리과정)</td>
+                        <td style="text-align: center;">2</td>
+                        <td style="text-align: center;">38</td>
+                    </tr>
+                    <tr>
+                        <td>뷰티아트과</td>
+                        <td style="text-align: center;">2</td>
+                        <td style="text-align: center;">38</td>
+                    </tr>
+                    <tr>
+                        <td>사진영상예술과</td>
+                        <td style="text-align: center;">1</td>
+                        <td style="text-align: center;">19</td>
+                    </tr>
+                    <tr>
+                        <td>그래픽디자인과</td>
+                        <td style="text-align: center;">1</td>
+                        <td style="text-align: center;">19</td>
+                    </tr>
+                    <tr>
+                        <td>펫케어과</td>
+                        <td style="text-align: center;">1</td>
+                        <td style="text-align: center;">19</td>
+                    </tr>
+                    <tr>
+                        <td>소프트웨어과</td>
+                        <td style="text-align: center;">1</td>
+                        <td style="text-align: center;">19</td>
+                    </tr>
+                    <tr class="SUM">
+                        <td>합계</td>
+                        <td style="text-align: center;">9</td>
+                        <td style="text-align: center;">171</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+    <li>
+        학과 구성의 위키피디아 링크: https://ko.wikipedia.org/wiki/인천산업정보학교#[학과]학과_구성_(기준:_2024학년도)
+    </li>
+
+</body>
