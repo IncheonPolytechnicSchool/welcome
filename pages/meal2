@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .meal-info-row {
+            border-bottom: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        .meal-info-row:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .date-box {
+            font-size: 1em;
+            border: 3px solid rgb(0, 238, 255);
+            border-radius: 15px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>급식 식단</h1>
+    <a style="color: rgb(255, 137, 137);">* 알레르기 정보
+        ①난류 ②우유 ③메밀 ④땅콩 ⑤대두 ⑥밀 ⑦고등어 ⑧게 ⑨새우 ⑩돼지고기 ⑪복숭아 ⑫토마토 ⑬아황산류 ⑭호두 ⑮닭고기 ⑯쇠고기 ⑰오징어 ⑱조개류(굴,전복,홍합 포함) ⑲잣</a>
+    <script>
+        const xmlUrl = "https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=fc9a2a91cf994506bcaa48b1be3b60f1&ATPT_OFCDC_SC_CODE=E10&SD_SCHUL_CODE=7310245&MLSV_FROM_YMD=20231101";
+    
+        function getDayOfWeek(date) {
+            const dayNames = ['일', '월', '화', '수', '목', '금', '토'];
+            return dayNames[date.getDay()];
+        }
+
+        function formatDate(dateStr) {
+            const year = dateStr.substring(0, 4);
+            const month = dateStr.substring(4, 6);
+            const day = dateStr.substring(6, 8);
+            const date = new Date(year, month - 1, day);
+            const dayOfWeek = getDayOfWeek(date);
+            return `${year}년 ${month}월 ${day}일 (${dayOfWeek}요일)`;
+        }
+    
+        function compareDates(date1, date2) {
+            return date1.getFullYear() === date2.getFullYear() &&
+                   date1.getMonth() === date2.getMonth() &&
+                   date1.getDate() === date2.getDate();
+        }
+    
+        fetch(xmlUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, "text/xml");
+    
+                const rows = xmlDoc.getElementsByTagName("row");
+                let currentMlsvYmd = null;
+                let currentTable = null;
+                let rowNumber = 1;
+                const currentDate = new Date();
+    
+                for (let i = 0; i < rows.length; i++) {
+                    const row = rows[i];
+                    const orplcInfo = row.getElementsByTagName("DDISH_NM")[0].textContent;
+                    const mlsvYmd = row.getElementsByTagName("MLSV_YMD")[0].textContent;
+                    const mealDate =                     new Date(mlsvYmd.substring(0, 4), mlsvYmd.substring(4, 6) - 1, mlsvYmd.substring(6, 8));
+    
+                    if (mealDate < currentDate && !compareDates(mealDate, currentDate)) {
+                        continue;
+                    }
+    
+                    if (mlsvYmd !== currentMlsvYmd) {
+                        currentMlsvYmd = mlsvYmd;
+                        const formattedDate = formatDate(currentMlsvYmd);
+                        const dateBox = document.createElement("div");
+                        dateBox.classList.add("date-box");
+                        document.body.appendChild(dateBox);
+    
+                        const dateHeading = document.createElement("h2");
+                        dateHeading.textContent = formattedDate;
+                        dateBox.appendChild(dateHeading);
+    
+                        const newTable = document.createElement("table");
+                        newTable.innerHTML = `
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>식단</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        `;
+                        dateBox.appendChild(newTable);
+                        currentTable = newTable.getElementsByTagName("tbody")[0];
+                        rowNumber = 1;
+                    }
+    
+                    const tableRow = document.createElement("tr");
+                    tableRow.classList.add("meal-info-row");
+    
+                    const rowNumCell = document.createElement("td");
+                    rowNumCell.textContent = rowNumber.toString();
+                    tableRow.appendChild(rowNumCell);
+    
+                    const mealTypeCell = document.createElement("td");
+                    const originCell = document.createElement("td");
+                    originCell.innerHTML = orplcInfo.replace(/<br\/>/g, "<br>");
+                    tableRow.appendChild(mealTypeCell);
+                    tableRow.appendChild(originCell);
+                    currentTable.appendChild(tableRow);
+    
+                    rowNumber++;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching the meal data:', error);
+                document.body.innerHTML += '<p>Error loading meal data. Please try again later.</p>';
+            });
+    </script>
+</body>
+</html>
+
