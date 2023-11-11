@@ -10,9 +10,13 @@
 <body>
 
     <h1>급식 식단(메뉴)</h1>
+    <h2>오늘: <p id="date"></p></h2>
+    <script>
+        document.getElementById("date").innerHTML = new Date().toDateString();
+    </script>
     <ul class="styled-list">
         <li>
-            오늘: 2023년 11월 13일 월요일.
+            2023년 11월 13일 월요일.
             혼합잡곡밥,
             꽃게탕,
             콩나물무침,
@@ -21,7 +25,7 @@
             오레오생크림크로플,
         </li>
         <li>    
-            내일: 2023년 11월 14일 화요일.
+            2023년 11월 14일 화요일.
             찰수수밥,
             츄러스,
             짜글이찌개,
